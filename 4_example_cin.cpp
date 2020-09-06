@@ -15,7 +15,7 @@ int main(void)
 /*
 
 OUTPUT:
-Enter Number: 5 5 //If the user input the data without enter the data is buffered and store, when the excution comes to next cin the processor automatically assigns the value to it.
+Enter Number: 5 5 //If the user input the data even the  program is not come to that instruction then the data is buffered and store, when the excution comes to next cin the processor automatically assigns the value to it.
 Enter Number: Multiplication is 25
 
 */

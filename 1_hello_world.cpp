@@ -4,6 +4,6 @@ using namespace std;
 
 int main(void)
 {
-    cout << "Hello World!";//Insertion Operator 
+    cout << "Hello World!";//Insertion Operator
     return 0;
 }
