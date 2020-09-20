@@ -11,7 +11,7 @@ int main(void)
     cout << x << " " << z << endl; //x = 11(Incremented value) and z = 10 (Old value)
     z = ++x;                       //Pre-fix => i.e,  first ==> x = x+1; Second ==> z = x; --> Unary Operator => Required 1 Operand only
     cout << x << " " << z << endl; //x = 12(Incremented value) and z = 12 (Old value)
-    
+
     /*
     Compiler Depended Behaviour/ Undefined Behaviour
     z = x++ ++x;
