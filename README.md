@@ -1,7 +1,4 @@
 # CppGeeksForGeeks
-<< - Insertion Operator
-
->> - Extraction Operator
 
 Input and Output are buffered in C++ Program.
 
