@@ -57,7 +57,7 @@
 
 # For Loop:
 
-Iterating through an array, list or any other containers, we generally prefer for loop.
+    Iterating through an array, list or any other containers, we generally prefer for loop.
 
 # While Loop:
 
