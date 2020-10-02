@@ -91,3 +91,14 @@ execution at that point and return.
     1. Inline function.
     2. Function Overloading.
     3. Default Argument.
+
+# Advantages of Arrays:
+
+    1. Random Access.
+    2. Cache Friendliness.
+
+# Limitation of Arrays:
+
+    We need to know the size before we create them. So, in CPP we use Vector from STL Library.
+
+# Pointers: 
