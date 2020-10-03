@@ -101,4 +101,91 @@ execution at that point and return.
 
     We need to know the size before we create them. So, in CPP we use Vector from STL Library.
 
-# Pointers: 
+# Pointers:
+
+1. & when used before a variable name (while not declaring it) given address of the variable.
+
+    ```
+    int main(){                   
+      int x = 10;
+      cout<<(&x);
+      return 0;
+    }
+    ```
+    | Operator    			| Precedence   		|Address      |
+    | :----------: 			| :-----------: 	|:-----------:|
+    | x                 | 10    			    |0x1234       |
+
+2. *(Dereference) When used before an address (or address variable, i.e, pointer) gives the value of the address.
+    ```
+    int main(){                   
+      int x = 10;
+      cout<<(*(&x));
+      return 0;
+    }
+    ```
+
+3. SYNTAX: int *ptr; or int* ptr; //Creating Pointer
+
+    ```
+    int main(){                   
+      int x = 10, int* ptr = &x;
+      cout<<(*ptr)<<" ";
+      cout<<ptr<<" ";
+      return 0;
+    }
+    ```
+    | Variable    			| Value   		 |Address      |
+    | :----------: 			| :-----------:|:-----------:|
+    | ptr               | 0x1234    	 |0x1238       |
+
+# Application of Pointer:
+
+    1. Dynamic Memory Allocation.
+    2. Implementation of Data Structure like Linked List, Tree, BST, etc.
+    3. To do System Level Programming.
+    4. To return multiple values.
+
+# Structure Alignment:
+1. Data types (Including int, float, double...) have alignment requirements.
+2. A structure has alignment requirements same as its largest number's requirements.
+<!-- Image -->
+4. We Should try to declare variable in increasing order or decreasing order in their size to get optional size of structure.
+
+# Reasons for Alignment:
+1. Physical memory is accessed in the form of word.
+2. Without Alignment, it is inefficient to store variable that span accross multiple words.
+<!-- Image -->
+3. If we remove alignment, then a 64-bits CPU would require two cycles to read d1.
+<!-- Image  -->
+4. Application of Union: Type Punning
+
+# Dynamic Memory Allocation:
+![image](https://drive.google.com/uc?export=view&id=1IhpZkOZ-4d8mziDXa1rgxNFdBplECMn5)
+
+# More on new:
+1. It is an operator.
+2. It return the pointer to the memory allocated.
+3. Always used for dynamic memory allocation.
+4. Calls constructs for objects of class/struct.
+5. Can Initialize value also.
+
+# 3 Types of Memory Allocation:
+1. Automatic => Stack.
+2. Static => Data => Throughout Program.
+3. Dynamic => Heap.
+
+# Exception Handling:
+1. Divide by Zero.
+2. No Heap memory available.
+3. Accessing array elements outside the allowed index reange.
+4. Pop from an empty Stack.
+
+# Try, throw & Catch:
+    ```
+    try{
+      //The code that may throw exception.
+    }
+    ```
+    throw: used to throw exception.
+    catch: one or more catch blocks are used to handle the exception.
