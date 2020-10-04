@@ -178,7 +178,7 @@ execution at that point and return.
 # Exception Handling:
 1. Divide by Zero.
 2. No Heap memory available.
-3. Accessing array elements outside the allowed index reange.
+3. Accessing array elements outside the allowed index range.
 4. Pop from an empty Stack.
 
 # Try, throw & Catch:
@@ -189,3 +189,38 @@ execution at that point and return.
     ```
     throw: used to throw exception.
     catch: one or more catch blocks are used to handle the exception.
+
+# Stack Unwinding in Exception handling:
+
+Stack Unwinding is a concept which says that a functions through an exception and if this function doesn't handle the exception then the control goes to the caller and if the caller also doesn't handle the exception then control goes to the caller of the caller and we keep on searching the handler for the exception in the function called stack until we find the handler and once we find the handler and once we find the handler, the handler get controlled and then out program continue after the handler.
+
+# NOTE:
+- As a general practice it is strongly recommended to use user defined exception only or non-primitive exceptions only.
+- CPP has some own pre-defined exceptions classes also.
+- In Java, the compiler not allow to throw primitive data-type as exception.
+
+# Exception Class in CPP:
+
+All Standard Library Exceptions like bad.alloc(thrown by new operator which there is any error during allocating Dynamic Memory), bad.cast, etc. inbuilt from exception class directly or indirectly.
+
+# Smart Pointer
+### Problem with Normal Pointers?
+Memory leak! If we dynamically allocate memory and we don't deallocate the memory compiler doesn't give any error or warning and as a programmer its our responsibilty to insure that whatever dynamically allocated memory we have we deallocate it. If we forget to deallocate the memory then our program has memory leak program. And this became very big problem like given below.
+```
+void fun(){
+  int *ptr = new
+}
+
+int main()
+{
+  while(true)
+  {
+    fun();
+  }
+}
+```
+
+### Smart Pointers:
+Smart Pointers try to solve this type of memory leak issue by wrapping a given pointer to a class object.
+
+#### Template smart pointer (can be used for any type).
