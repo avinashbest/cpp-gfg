@@ -101,6 +101,21 @@ execution at that point and return.
 
     We need to know the size before we create them. So, in CPP we use Vector from STL Library.
 
+# CPP Strings:
+- Richer Library
+- Supports Operators like =, -, <, >, ==, <=, >= are possible.
+- Can assign a string later
+- Don not have to worry about size.
+- Can be converted to C-Style if needed.
+
+# Reference:
+-  Create an alias
+-  Must be assigned when declared
+-  Cannot refer to another location
+-  Cannot be NULL
+-  Safer
+-  Easier to use
+
 # Pointers:
 
 1. & when used before a variable name (while not declaring it) given address of the variable.
