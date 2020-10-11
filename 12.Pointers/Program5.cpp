@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
-int main() {
+
+int main() 
+{
   int* ptr;
   double* ptr_d;
   string* ptr_str;
