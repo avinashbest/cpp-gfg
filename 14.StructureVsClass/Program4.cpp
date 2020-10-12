@@ -2,9 +2,9 @@
 #include <iostream>
 using namespace std;
 
-class base{
+class base {
 private:
-  int x;
+	int x;
 };
 
 class derived: base {
@@ -18,9 +18,9 @@ class derived: public base {
 };
 */
 int main() { //Compiler error => Provate member accessing
-  derived d;
-  d.x = 20;
-  return 0;
+	derived d;
+	d.x = 20;
+	return 0;
 }
 
 //Program 5 contd.
