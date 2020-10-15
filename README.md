@@ -239,3 +239,4 @@ int main()
 Smart Pointers try to solve this type of memory leak issue by wrapping a given pointer to a class object.
 
 #### Template smart pointer (can be used for any type).
+# CPP Library implimantation of smart pointer.
