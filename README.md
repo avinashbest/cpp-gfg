@@ -22,6 +22,7 @@
       return 0;
     }
     ```
+
 # Basic I/O in CPP:
 
     1. cout -> std O/P stream.
@@ -77,8 +78,8 @@
 1. Functions is a block of code that take I/P and gives O/P however I/O are optional.
 2. Functions calls are happens in Last In First Out (LIFO) order.
 3. We can use return Statement with void also in normal function which return a data type
-we write something after return. But in void we can use return semi-colon to stop the
-execution at that point and return.
+   we write something after return. But in void we can use return semi-colon to stop the
+   execution at that point and return.
 
 # Application of Functions:
 
@@ -102,6 +103,7 @@ execution at that point and return.
     We need to know the size before we create them. So, in CPP we use Vector from STL Library.
 
 # CPP Strings:
+
 - Richer Library
 - Supports Operators like =, -, <, >, ==, <=, >= are possible.
 - Can assign a string later
@@ -109,50 +111,54 @@ execution at that point and return.
 - Can be converted to C-Style if needed.
 
 # Reference:
--  Create an alias
--  Must be assigned when declared
--  Cannot refer to another location
--  Cannot be NULL
--  Safer
--  Easier to use
+
+- Create an alias
+- Must be assigned when declared
+- Cannot refer to another location
+- Cannot be NULL
+- Safer
+- Easier to use
 
 # Pointers:
 
 1. & when used before a variable name (while not declaring it) given address of the variable.
 
-    ```
-    int main(){                   
-      int x = 10;
-      cout<<(&x);
-      return 0;
-    }
-    ```
-    | Operator    			| Precedence   		|Address      |
-    | :----------: 			| :-----------: 	|:-----------:|
-    | x                 | 10    			    |0x1234       |
+   ```
+   int main(){
+     int x = 10;
+     cout<<(&x);
+     return 0;
+   }
+   ```
 
-2. *(Dereference) When used before an address (or address variable, i.e, pointer) gives the value of the address.
-    ```
-    int main(){                   
-      int x = 10;
-      cout<<(*(&x));
-      return 0;
-    }
-    ```
+   | Operator | Precedence | Address |
+   | :------: | :--------: | :-----: |
+   |    x     |     10     | 0x1234  |
 
-3. SYNTAX: int *ptr; or int* ptr; //Creating Pointer
+2. \*(Dereference) When used before an address (or address variable, i.e, pointer) gives the value of the address.
 
-    ```
-    int main(){                   
-      int x = 10, int* ptr = &x;
-      cout<<(*ptr)<<" ";
-      cout<<ptr<<" ";
-      return 0;
-    }
-    ```
-    | Variable    			| Value   		 |Address      |
-    | :----------: 			| :-----------:|:-----------:|
-    | ptr               | 0x1234    	 |0x1238       |
+   ```
+   int main(){
+     int x = 10;
+     cout<<(*(&x));
+     return 0;
+   }
+   ```
+
+3. SYNTAX: int _ptr; or int_ ptr; //Creating Pointer
+
+   ```
+   int main(){
+     int x = 10, int* ptr = &x;
+     cout<<(*ptr)<<" ";
+     cout<<ptr<<" ";
+     return 0;
+   }
+   ```
+
+   | Variable | Value  | Address |
+   | :------: | :----: | :-----: |
+   |   ptr    | 0x1234 | 0x1238  |
 
 # Application of Pointer:
 
@@ -162,12 +168,14 @@ execution at that point and return.
     4. To return multiple values.
 
 # Structure Alignment:
+
 1. Data types (Including int, float, double...) have alignment requirements.
 2. A structure has alignment requirements same as its largest number's requirements.
 <!-- Image -->
-4. We Should try to declare variable in increasing order or decreasing order in their size to get optional size of structure.
+3. We Should try to declare variable in increasing order or decreasing order in their size to get optional size of structure.
 
 # Reasons for Alignment:
+
 1. Physical memory is accessed in the form of word.
 2. Without Alignment, it is inefficient to store variable that span accross multiple words.
 <!-- Image -->
@@ -176,9 +184,11 @@ execution at that point and return.
 4. Application of Union: Type Punning
 
 # Dynamic Memory Allocation:
+
 ![image](https://drive.google.com/uc?export=view&id=1IhpZkOZ-4d8mziDXa1rgxNFdBplECMn5)
 
 # More on new:
+
 1. It is an operator.
 2. It return the pointer to the memory allocated.
 3. Always used for dynamic memory allocation.
@@ -186,17 +196,20 @@ execution at that point and return.
 5. Can Initialize value also.
 
 # 3 Types of Memory Allocation:
+
 1. Automatic => Stack.
 2. Static => Data => Throughout Program.
 3. Dynamic => Heap.
 
 # Exception Handling:
+
 1. Divide by Zero.
 2. No Heap memory available.
 3. Accessing array elements outside the allowed index range.
 4. Pop from an empty Stack.
 
 # Try, throw & Catch:
+
     ```
     try{
       //The code that may throw exception.
@@ -210,6 +223,7 @@ execution at that point and return.
 Stack Unwinding is a concept which says that a functions through an exception and if this function doesn't handle the exception then the control goes to the caller and if the caller also doesn't handle the exception then control goes to the caller of the caller and we keep on searching the handler for the exception in the function called stack until we find the handler and once we find the handler and once we find the handler, the handler get controlled and then out program continue after the handler.
 
 # NOTE:
+
 - As a general practice it is strongly recommended to use user defined exception only or non-primitive exceptions only.
 - CPP has some own pre-defined exceptions classes also.
 - In Java, the compiler not allow to throw primitive data-type as exception.
@@ -219,8 +233,11 @@ Stack Unwinding is a concept which says that a functions through an exception an
 All Standard Library Exceptions like bad.alloc(thrown by new operator which there is any error during allocating Dynamic Memory), bad.cast, etc. inbuilt from exception class directly or indirectly.
 
 # Smart Pointer
+
 ### Problem with Normal Pointers?
+
 Memory leak! If we dynamically allocate memory and we don't deallocate the memory compiler doesn't give any error or warning and as a programmer its our responsibilty to insure that whatever dynamically allocated memory we have we deallocate it. If we forget to deallocate the memory then our program has memory leak program. And this became very big problem like given below.
+
 ```
 void fun(){
   int *ptr = new
@@ -236,7 +253,9 @@ int main()
 ```
 
 ### Smart Pointers:
+
 Smart Pointers try to solve this type of memory leak issue by wrapping a given pointer to a class object.
 
 #### Template smart pointer (can be used for any type).
+
 # CPP Library implimantation of smart pointer.
