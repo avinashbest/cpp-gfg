@@ -259,3 +259,7 @@ Smart Pointers try to solve this type of memory leak issue by wrapping a given p
 #### Template smart pointer (can be used for any type).
 
 # CPP Library implementation of smart pointer.
+
+1. Shared Pointer
+2. Unique Pointer
+3. Weak Pointer
