@@ -1,0 +1,19 @@
+include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int n,a,b;cin>>n;
+	while(n--){
+	    cin>>a>>b;
+	    int arr[a+1];
+	    for(int i=0;i<a;i++){
+	        cin>>arr[i];
+	    }
+	    arr[a] = b;
+	    int *y = max_element(arr ,arr+a+1);
+	    if(abs(*y-b)==0){cout<<-1<<endl;}
+	    else{cout<<abs(*y-b)<<endl;}
+	}
+	return 0;
+}
