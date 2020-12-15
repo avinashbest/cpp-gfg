@@ -1,0 +1,49 @@
+// { Driver Code Starts
+//Initial Template for C++
+
+#include<bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+
+
+//User function Template for C++
+
+class Solution{
+public:
+    vector<int> compositeNumbers(int N){
+        // code here
+         int arr[N+1]={0};
+        for(int i=2;i<=sqrt(N);i++){
+            int k=i;
+            k+=i;
+            while(k<=N){
+                arr[k]=1;
+                k+=i;
+            }
+        }
+        vector<int> vec;
+        for(int i=2;i<=N;i++){
+            if(arr[i]!=0){vec.push_back(i);}
+        }
+        return vec;
+    }
+};
+
+// { Driver Code Starts.
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int N;
+        cin>>N;
+        
+        Solution ob;
+        vector<int> ans = ob.compositeNumbers(N);
+        for(int u: ans)
+            cout<<u<<" ";
+        cout<<"\n";
+    }
+    return 0;
+}  // } Driver Code Ends
