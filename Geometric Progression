@@ -1,0 +1,30 @@
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+
+
+
+class Solution {
+  public:
+    long long geoProg(long long N) {
+        // code here
+        return pow(2,pow(2,N)) - 1;
+    }
+};
+
+// { Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long N;
+        
+        cin>>N;
+
+        Solution ob;
+        cout << ob.geoProg(N) << endl;
+    }
+    return 0;
+}  // } Driver Code Ends
